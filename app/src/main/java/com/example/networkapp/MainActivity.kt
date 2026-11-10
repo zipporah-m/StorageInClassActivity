@@ -49,10 +49,8 @@ class MainActivity : AppCompatActivity() {
     // Fetches comic from web as JSONObject
     private fun downloadComic (comicId: String) {
         val url = "https://xkcd.com/$comicId/info.0.json"
-        requestQueue.add (
-            JsonObjectRequest(url
-                , {showComic(it)}
-                , {}
+        requestQueue.add(
+            JsonObjectRequest(url, { showComic(it) }, {}
             )
         )
     }
